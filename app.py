@@ -8,9 +8,10 @@ from json import dumps
 from os import environ as env
 
 ## Python3 does not include bottle in the stdlib
-## so we want to fail gracefully and log it as such.
+## so we want to fail gracefully and log it as such
+## if we have not run pip install botttle
 try:
-    from bottle import route, run, template, default_app, request, response
+    from bottle import route, default_app, request, response
 except ImportError as e:
     log.fatal(e)
     sys.exit(1)
