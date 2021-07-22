@@ -24,7 +24,7 @@ except ImportError as e:
 ## Application Logic ##
 #######################
 ## Our API server
-@route('/api/echo', method='POST')
+@route('/api/echo', method=['POST', 'PUT'])
 def index():
     ## Return 415, because this must have a Content-Type of application/json
     if request.content_type != "application/json":
