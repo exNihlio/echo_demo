@@ -48,7 +48,6 @@ def index():
             response.status = 400
             response.content_type = "application/json"
             return dumps({"error": "this has been echoed",
-                          "data": f"{json_post}",
                           "http_error_code": response.status})
     except:
         pass
