@@ -18,6 +18,6 @@ an error.
 
 `curl -v --header "Content-Type: application/json" --data '{"foo": "bar"}' -XPOST  http://127.0.0.1:8080/api/echo`
 
-If everything is working correctly you should see this:
+If everything is working correctly you should see the following:
 
 `{"foo": "bar", "echoed": true}`
