@@ -21,10 +21,22 @@ except ImportError as e:
 ####################
 ## Opinion: When containerizing, env variables are preferable.
 
+cow = """
+^__^
+(oo)\_______
+(__)\       )\/\\
+    ||----w |
+    ||     ||
+"""
 #######################
 ## Application Logic ##
 #######################
 ## Our API server
+@route('/', method=['GET'])
+def index():
+    response.status = 200
+    return cow
+
 @route('/api/echo', method=['POST', 'PUT'])
 def index():
     ## Return 415, because this must have a Content-Type of application/json
@@ -33,6 +45,9 @@ def index():
         response.content_type = "application/json"
         return dumps({"error": "Content-Type must be application/json",
                       "http_error_code": response.status})
+
+    if request.method not in ['POST', 'PUT']:
+        response.status = 405
 
     ## Validate that we have valid JSON
     try:
