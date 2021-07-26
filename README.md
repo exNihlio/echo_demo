@@ -96,7 +96,7 @@ running Docker. The Macbook has the following specs:
 
 The Docker container was configured as follows:
 
-`docker run -it --rm -d --cpus 1 --memory 1024m -p 8080:8080 echo:1`
+`docker run --rm -d --cpus 1 --memory 1024m -p 8080:8080 echo:1`
 
 This provided the container with a single CPU and 1GB of memory.
 
