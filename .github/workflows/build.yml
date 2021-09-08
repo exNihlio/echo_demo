@@ -27,5 +27,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/exNihlio/echo_demo:${{ env.tag_version }}
-            ghcr.io/exNihlio/echo_demo:latest
+            ghcr.io/exnihlio/echo_demo:${{ env.tag_version }}
+            ghcr.io/exnihlio/echo_demo:latest
